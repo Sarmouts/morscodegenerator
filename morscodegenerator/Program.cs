@@ -13,6 +13,7 @@ namespace morscodegenerator
         {
             while (true)
             {
+                Console.Write("Enter your text: ");
                 string str = Console.ReadLine();
                 Dictionary<char, string> morscode = new Dictionary<char, string>()
                 {
@@ -74,13 +75,14 @@ namespace morscodegenerator
                 {
                     if (str[i] == ' ')
                     {
-                        encryptedText += "  ";
+                        encryptedText += " ";
                     }
                     else
                     {
                         encryptedText += morscode[str[i]] + " ";
                     }
                 }
+                Console.WriteLine("Here is your text in mors code and you hear your mors message:");
                 Console.WriteLine(encryptedText);
                 for (int i = 0; i < encryptedText.Length; i++)
                 {
@@ -98,11 +100,8 @@ namespace morscodegenerator
                         Console.Beep(800, 500);
                     }
                 }
-                // Console.Beep(1000, 167);
-
-
-                // Console.Beep(1000, 500);
-                // Console.Beep(500, 700);
+                Console.WriteLine("====================================================================");
+                Console.WriteLine(); 
             }
         }
     }
