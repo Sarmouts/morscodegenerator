@@ -68,7 +68,17 @@ namespace morscodegenerator
                     {'Y',"-.--"},
                     {'y',"-.--"},
                     {'Z',"--.."},
-                    {'z',"--.."}
+                    {'z',"--.."},
+                    {'0',"-----"},
+                    {'1',".----"},
+                    {'2',"..---"},
+                    {'3',"...--"},
+                    {'4',"....-"},
+                    {'5',"....."},
+                    {'6',"-...."},
+                    {'7',"--..."},
+                    {'8',"---.."},
+                    {'9',"----."},
                 };
                 string encryptedText = "";
                 for (int i = 0; i < str.Length; i++)
@@ -88,7 +98,6 @@ namespace morscodegenerator
                 {
                     if (encryptedText[i] == ' ')
                     {
-                        // Will delay for three seconds
                         Thread.Sleep(500);
                     }
                     else if (encryptedText[i] == '.')
